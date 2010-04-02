@@ -36,6 +36,9 @@
 
 			if($.browser.msie && options != "") {
 				obj.css({"position":"relative","zoom":"1"}).append(text);
+				if($.browser.version >= 8) {
+				  obj.css({"z-index":"1"});
+				}
 				obj.children("span.jQshad").css({
 					"position":"absolute",
 					"z-index":"-1",
